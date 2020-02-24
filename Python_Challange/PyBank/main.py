@@ -65,8 +65,8 @@ def changelocator(change):
             return all_month[i-1]
             break
         
-#max_month = changelocator(max(int(net_change[i])))
-#min_month= changelocator(min(int(net_change[i])))
+max_month = changelocator(max(net_change))
+min_month = changelocator(min(net_change))
 #min_month= changelocator
 average_change = mean(net_change)
 format_average_cahnge = round (average_change, 2)
