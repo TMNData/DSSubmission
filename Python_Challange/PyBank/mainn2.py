@@ -43,13 +43,13 @@ total_profit = 0
 # and find max increase max decrease and corrosponding months
 for x in range(len(net_profit)):
 
-    total_profit = net_profit[0] + 1
-
-    if net_profit[x] >= greatest_increase:
-        greatest_increase = net_profit[x]
-    
-    elif net_profit[x] <= greatest_decrease:
-        greatest_decrease = net_profit[x]
+    # total_profit = net_profit + 1
+    if (x+1) == len(net_profit):
+        if net_profit[x] >= greatest_increase:
+            greatest_increase = net_profit[x + 1]
+    if (x+1) < len(net_profit):
+        if net_profit[x] <= greatest_decrease:
+            greatest_decrease = net_profit[x + 1]
 
 #total_profit = 0
 
